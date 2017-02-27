@@ -28,13 +28,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="reservation.js" type="text/javascript"></script>
         <script>
-            
-            // Reservation.expected(month, year);
-            // Reservetion returns promise,we can get the data by using '.then'
 
             $('#submit').on('click', function () {
                 var month = $('#month').val();
                 var year = $('#year').val();
+                
+                // Reservation.expected(month, year);
+                // Reservetion returns promise, we can get the data by using '.then'
                 Reservation.expected(month, year).then(function (data) {
                     // data = {revenue: Number, capacity: Number}
                     var reveneu = "<p>Expected revenue: <strong>$" + data.revenue + "</strong>";
